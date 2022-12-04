@@ -110,18 +110,18 @@ public:
 		{
 			return;
 		}
-		if (parent[ulp_u] < parent[ulp_v])
+		if (rank[ulp_u] < rank[ulp_v])
 		{
 			parent[ulp_u] = ulp_v;
 		}
-		else if (parent[ulp_u] > parent[ulp_v])
+		else if (rank[ulp_u] > rank[ulp_v])
 		{
 			parent[ulp_v] = ulp_u;
 		}
 		else
 		{
 			parent[ulp_v] = ulp_u;
-			rank[ulp_v]++;
+			rank[ulp_v] += rank[ulp_u] + 1;
 		}
 	}
 };
