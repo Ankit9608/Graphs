@@ -121,8 +121,23 @@ public:
 		else
 		{
 			parent[ulp_v] = ulp_u;
-			rank[ulp_v] += rank[ulp_u] + 1;
+			rank[ulp_u] += rank[ulp_v] + 1;
 		}
+	}
+	void print()
+	{
+		cout << "parent= ";
+		for (int i = 0; i <= 7; i++)
+		{
+			cout << parent[i] << " ";
+		}
+		cout << "\n";
+		cout << "rank= ";
+		for (int i = 0; i <= 7; i++)
+		{
+			cout << rank[i] << " ";
+		}
+		cout << "\n";
 	}
 };
 int main()
@@ -150,5 +165,6 @@ int main()
 	{
 		cout << "Not Same\n";
 	}
+	ds.print();
 	return 0;
 }
