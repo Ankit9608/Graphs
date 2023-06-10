@@ -41,12 +41,12 @@ void dijkstraqueue(vector<pair<int, int>> adj[], vector<int> &dist)
 int main()
 {
     int n, m;
-    cin >> n >> m;
+    std::cin >> n >> m;
     vector<pair<int, int>> adj[n + 1];
     for (int i = 0; i < m; i++)
     {
         int a, b, wt;
-        cin >> a >> b >> wt;
+        std::cin >> a >> b >> wt;
         addedge(a, b, wt, adj);
     }
     vector<int> dist(n, 1e9);
