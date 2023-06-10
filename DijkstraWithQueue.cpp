@@ -36,6 +36,7 @@ void dijkstraqueue(vector<pair<int, int>> adj[], vector<int> &dist)
             }
         }
     }
+    // ll
 }
 int main()
 {
